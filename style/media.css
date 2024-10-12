@@ -1,0 +1,70 @@
+@media (max-width: 480px) {
+    .modal {
+        width: 300px;
+    }
+
+    .modal__title {
+        margin: 50px 0 20px 0;
+        font-size: 22px;
+        text-align: center;
+    }
+
+    .modal__input-wrapper {
+        width: 200px;
+        margin: 0 auto 30px auto;
+    }
+
+    .modal__container {
+        padding-top: 230px;
+    }
+
+    .modal__container-right {
+        left: 50%;
+        transform: translateX(-50%);
+        top: 0;
+        width: 175px;
+    }
+
+    .modal__label {
+        font-size: 10px;
+    }
+
+    .modal__input, .modal__select {
+        font-size: 12px;
+    }
+
+    .modal__submit {
+        width: 200px;
+        font-size: 12px;
+    }
+
+    .modal__cancel {
+        font-size: 12px;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .modal {
+        width: 470px;
+    }
+
+    .modal__container {
+        padding-top: 230px;
+    }
+
+    .modal__container-right {
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 175px;
+    }
+
+    .modal__input-wrapper {
+        width: 350px;
+        margin: 0 auto 30px auto;
+    }
+
+    .modal__submit {
+        width: 350px;
+    }
+}

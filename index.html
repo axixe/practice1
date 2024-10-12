@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/media.css">
+    <title>practice 1</title>
+</head>
+<body>
+    <button class="open-modal-btn">open modal</button>
+
+    <div class="overlay" id="overlay"></div>
+
+    <dialog class="modal">
+        <h1 class="modal__title">Стать партнёром проекта</h1>
+
+        <form action="#" class="modal__form">
+            <div class="modal__container">
+                <div class="modal__container-left">
+                    <div class="modal__input-wrapper modal__input-wrapper--short">
+                        <label for="corp" class="modal__label"><span>✱</span> Название организации</label>
+                        <input name="corp" type="text" class="modal__input"  id="corp" />
+                    </div>
+            
+                    <div class="modal__input-wrapper modal__input-wrapper--short">
+                        <label for="phone" class="modal__label"><span>✱</span> Телефон</label>
+                        <input name="phone" type="text" class="modal__input"  id="phone" />
+                    </div>
+            
+                    <div class="modal__input-wrapper modal__input-wrapper--short">
+                        <label for="email" class="modal__label"><span>✱</span> E-mail</label>
+                        <input name="email" type="email" class="modal__input"  id="email" />
+                    </div>
+                </div>
+    
+                <div class="modal__logo-wrapper modal__container-right">
+                    <label for="" class="modal__label"><span>✱</span> Логотип (jpeg, png)</label>
+                    <div class="modal__logo">
+                        <img src="" alt="" class="modal__icon">
+                        <div class="modal__descr">Выберите файл</div>
+                        <div class="modal__xmark">✕</div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="modal__input-wrapper">
+                <label for="" class="modal__label"><span>✱</span> Направление</label>
+                <div class="modal__select">Экология</div>
+                <img src="icons/arrow.svg" alt="arrow" class="icon">
+            </div>
+    
+            <div class="modal__input-wrapper">
+                <input name="website" type="text" class="modal__input modal__input--iconed" id="website" />
+                <img src="icons/browser.svg" alt="website-icon" class="icon">
+            </div>
+    
+            <div class="modal__input-wrapper">
+                <input name="vk" type="text" class="modal__input modal__input--iconed" id="vk" />
+                <img src="icons/vk.svg" alt="vk-icon" class="icon">
+            </div>
+    
+            <div class="modal__input-wrapper">
+                <input name="ok" type="text" class="modal__input modal__input--iconed" id="ok" />
+                <img src="icons/ok.svg" alt="ok-icon" class="icon">
+            </div>
+    
+            <div class="modal__input-wrapper">
+                <input name="fb" type="text" class="modal__input modal__input--iconed" id="fb" />
+                <img src="icons/fb.svg" alt="fb-icon" class="icon">
+            </div>
+    
+            <div class="modal__input-wrapper">
+                <input name="inst" type="text" class="modal__input modal__input--iconed" id="inst" />
+                <img src="icons/inst.svg" alt="inst-icon" class="icon">
+            </div>
+    
+            <div class="modal__input-wrapper">
+                <input name="yt" type="text" class="modal__input modal__input--iconed" id="yt" />
+                <img src="icons/yt.svg" alt="yt-icon" class="icon">
+            </div>
+    
+            <div class="modal__input-wrapper">
+                <label for="director" class="modal__label"><span>✱</span> Руководитель</label>
+                <input name="director" type="text" class="modal__input"  id="director" />
+            </div>
+    
+            <button class="modal__submit" type="submit">Стать партнёром проекта</button>
+            <button class="modal__cancel">Отменить</button>
+        </form>
+    </dialog>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
