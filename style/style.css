@@ -118,6 +118,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     width: 175px;
     height: 175px;
     background: url('../img/logo.svg') center center/cover no-repeat;
