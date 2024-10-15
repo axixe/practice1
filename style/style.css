@@ -121,9 +121,30 @@
     flex-direction: column;
     width: 175px;
     height: 175px;
-    background: url('../img/logo.svg') center center/cover no-repeat;
     margin-top: 30px;
+    border-radius: 100%;
     cursor: pointer;
+    z-index: 1;
+}
+
+.modal__preview {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 100%;
+    z-index: -1;
+}
+
+.modal__file-text-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.modal__file-text-wrapper--hidden {
+    display: none;
 }
 
 .modal__descr {
@@ -144,10 +165,29 @@
     width: 36px;
     height: 36px;
     background-color: white;
+    border: none;
     border-radius: 45px;
     font-size: 15px;
     font-weight: 700;
     color: #6A6E72;
+    cursor: pointer;
+    z-index: 5;
+}
+
+.modal__xmark--hidden {
+    display: none;
+}
+
+.modal__input--file {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    border-radius: 60px;
+    opacity: 0;
+    z-index: 4;
     cursor: pointer;
 }
 
