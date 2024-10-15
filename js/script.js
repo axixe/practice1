@@ -1,16 +1,17 @@
 // VALIDATION
 
-const fields = ['corp', 'phone', 'email', 'director'],
+const fields = ['corp', 'phone', 'email', 'director', 'logo'],
       fieldNames = {
         corp: 'Название организации',
         phone: 'Телефон',
         email: 'E-mail',
-        director: 'Руководитель'
+        director: 'Руководитель',
+        logo: 'Логотип'
       };
 const values = fields.map(id => document.querySelector(`#${id}`)),
       form = document.querySelector('.modal__form');
 
-const [corp, phone, email, director] = values;
+const [corp, phone, email, director, logo] = values;
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -42,6 +43,67 @@ function nullDataTest(valArray, fields, fieldNames) {
 
     return (errorMessage ? false : true);
 }
+
+// MASK OF PHONE NUMBER
+
+phone.addEventListener('input', phoneMask);
+phone.addEventListener('focus', phoneMask);
+
+function phoneMask(e) {
+    const input = e.target;
+    let value = input.value.replace(/\D/g, '');
+
+    const pattern = [
+        '+7 (',
+        value.substring(1, 4),
+        value.length >= 5 ? ') ' : '',
+        value.substring(4, 7),
+        value.length >= 8 ? '-' : '',
+        value.substring(7, 9),
+        value.length >= 10 ? '-' : '',
+        value.substring(9, 11)
+    ];
+
+    input.value = pattern.join('');
+}
+
+// SHOW FILE PREVIEW
+
+const preview = document.querySelector('.modal__preview'),
+      clearLogo = document.querySelector('.modal__xmark'),
+      textWrapper = document.querySelector('.modal__file-text-wrapper');
+
+logo.addEventListener('change', () => {
+    const file = logo.files[0];
+    
+    if (file && file.type.startsWith('image/')) {
+        const reader = new FileReader();
+    
+        reader.onload = function (e) {
+            preview.src = e.target.result;
+        };
+
+        textWrapper.classList.add('modal__file-text-wrapper--hidden');
+        clearLogo.classList.remove('modal__xmark--hidden');
+
+        reader.readAsDataURL(file);
+    } else {
+        textWrapper.classList.remove('modal__file-text-wrapper--hidden');
+        clearLogo.classList.add('modal__xmark--hidden');
+
+        preview.src = 'img/preview.svg';
+    }
+});
+
+clearLogo.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    preview.src = 'img/preview.svg';
+    textWrapper.classList.remove('modal__file-text-wrapper--hidden');
+    clearLogo.classList.add('modal__xmark--hidden');
+
+    logo.value = '';
+});
 
 // CLOSE/OPEN MODAL WIN
 
