@@ -25,26 +25,30 @@
                 <div class="modal__container-left">
                     <div class="modal__input-wrapper modal__input-wrapper--short">
                         <label for="corp" class="modal__label"><span>✱</span> Название организации</label>
-                        <input name="corp" type="text" class="modal__input"  id="corp" />
+                        <input name="corp" type="text" class="modal__input" id="corp" />
                     </div>
             
                     <div class="modal__input-wrapper modal__input-wrapper--short">
                         <label for="phone" class="modal__label"><span>✱</span> Телефон</label>
-                        <input name="phone" type="text" class="modal__input"  id="phone" />
+                        <input name="phone" type="text" class="modal__input" id="phone" />
                     </div>
             
                     <div class="modal__input-wrapper modal__input-wrapper--short">
                         <label for="email" class="modal__label"><span>✱</span> E-mail</label>
-                        <input name="email" type="email" class="modal__input"  id="email" />
+                        <input name="email" type="email" class="modal__input" id="email" />
                     </div>
                 </div>
     
                 <div class="modal__logo-wrapper modal__container-right">
-                    <label for="" class="modal__label"><span>✱</span> Логотип (jpeg, png)</label>
+                    <label class="modal__label"><span>✱</span> Логотип (jpeg, png)</label>
                     <div class="modal__logo">
-                        <img src="icons/upload.svg" alt="upload" class="modal__icon">
-                        <div class="modal__descr">Выберите файл</div>
-                        <div class="modal__xmark">✕</div>
+                        <img src="img/preview.svg" alt="preview" class="modal__preview">
+                        <div class="modal__file-text-wrapper">
+                            <img src="icons/upload.svg" alt="upload" class="modal__icon">
+                            <div class="modal__descr">Выберите файл</div>
+                        </div>
+                        <button class="modal__xmark modal__xmark--hidden">✕</button>
+                        <input type="file" accept=".jpeg,.png" id="logo" class="modal__input modal__input--file">
                     </div>
                 </div>
             </div>
